@@ -28,8 +28,9 @@ https://github.com/elastic
 1. **인덱스(Index)**: 데이터베이스, 문서의 모음을 유지하는 논리적 네임스페이스. 인덱싱 과정을 거친 결과물
     1. **인덱싱(Indexing)**: 데이터를 검색될 수 있는 구조로 변경하기 위해 문서를 검색어 토큰으로 변환해 저장하는 과정
         1. **검색**: 인덱스에 들어있는 검색어 토큰들을 포함하는 문서를 찾아가는 과정
+           ![스크린샷 2024-05-22 오전 8 33 56](https://github.com/2eey10/elasticsearch-vector-crud/assets/133326837/6b169660-e325-4ce1-9e13-1da63513b0d4)
             
-            ![스크린샷 2024-05-22 오전 8.33.56.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/61348738-4149-40f5-bfd0-910df567780f/1154a142-a25d-49ed-b2d4-d529ca2dd254/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-05-22_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_8.33.56.png)
+          
             
 2. **문서(Document):** **행**, 인덱스에 저장되는 기본 정보 단위. JSON 형식으로 표현
 3. **필드(Filed):** **열**, 문서의 각 항목. 데이터의 특정 속성을 포함.
@@ -45,10 +46,9 @@ https://github.com/elastic
 7. **클러스터(Cluster):** 하나 이상의 노드로 구성된 것으로. 색인 및 검색 기능 제공
     1. 클러스터 명이 같으면 같은 클러스터로 묶이고, 다르면 같은 물리적 장비 및 같은 네트워크 상이더라도 서로 다른 클러스터 명으로 바인딩 됨
 8. **매핑(Mapping):** 인덱스에 저장된 문서들의 필드가 어떻게 저장되고 색인되는지 정의. ↔ RDBMS의 스키마
+<img width="750" alt="스크린샷 2024-05-17 오후 4 27 43" src="https://github.com/2eey10/elasticsearch-vector-crud/assets/133326837/3c8e852e-c80b-46e6-b511-0b10ef7fc3c4">
 
-![스크린샷 2024-05-17 오후 4.27.43.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/61348738-4149-40f5-bfd0-910df567780f/99aaff2a-b3e8-41d9-8bf2-0652cb07b9e8/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-05-17_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.27.43.png)
-
-![스크린샷 2024-05-20 오전 11.07.25.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/61348738-4149-40f5-bfd0-910df567780f/78329aff-e56c-43a1-977f-8983f1c07975/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-05-20_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_11.07.25.png)
+![스크린샷 2024-05-20 오전 11 07 25](https://github.com/2eey10/elasticsearch-vector-crud/assets/133326837/9765775f-69e0-4eab-a088-2c47d3fef877)
 
 ```json
 
@@ -136,7 +136,6 @@ https://github.com/elastic
         
         [Elasticsearch: 공식 분산형 검색 및 분석 엔진 | Elastic](https://www.elastic.co/kr/elasticsearch)
         
-        !https://www.elastic.co/favicon-16x16.png
         
 2. 다운로드 받은 후, 경로로 이동해 `unzip` 후 아래 코드 실행
     1. `./bin/elasticsearch`
@@ -157,10 +156,10 @@ https://github.com/elastic
     ```
     
 3. 실행 시 아래의 화면이 출력된다
+![스크린샷 2024-05-17 오후 2 18 18 (1)](https://github.com/2eey10/elasticsearch-vector-crud/assets/133326837/1b893f22-3f03-4bc3-8eac-a3c9eba505b9)
+![***login_info, enrollment token, http figer print. 이 세 가지 정보는 따로 저장 必***]
 
-![***login_info, enrollment token, http figer print. 이 세 가지 정보는 따로 저장 必***](https://prod-files-secure.s3.us-west-2.amazonaws.com/61348738-4149-40f5-bfd0-910df567780f/525ca1b7-5893-4084-b6be-7e3d85be8812/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-05-17_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_2.18.18.png)
 
-***login_info, enrollment token, http figer print. 이 세 가지 정보는 따로 저장 必***
 
 1. **user, password**: Elasticsearch를 관리하는 기본 사용자인 'elastic'의 비밀번호가 설정됨. **따로 기록해두는 것** 권장.
     
@@ -178,7 +177,7 @@ https://github.com/elastic
 
 **Elasticsearch**가 사용하는 `port=9200`. [https://localhost:9200](https://localhost:9200/) 접속
 
-![스크린샷 2024-05-17 오후 2.41.33.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/61348738-4149-40f5-bfd0-910df567780f/dea902e9-6771-41ee-bf42-29ec4917b470/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-05-17_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_2.41.33.png)
+![스크린샷 2024-05-17 오후 2 41 33](https://github.com/2eey10/elasticsearch-vector-crud/assets/133326837/5124ce4a-46b0-4aca-a756-1eff7ad0f0bd)
 
 ```json
 	{
@@ -208,30 +207,30 @@ https://github.com/elastic
     
     [Download Kibana Free | Get Started Now](https://www.elastic.co/kr/downloads/kibana)
     
-    !https://www.elastic.co/favicon-16x16.png
+
     
 2. 다운로드 받은 후, 경로로 이동해 `unzip` 후 `bin/kibana` 실행
     - CLI를 새 창으로 더 열고 실행하는 것을 추천
 
-![스크린샷 2024-05-17 오후 2.20.20.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/61348738-4149-40f5-bfd0-910df567780f/2db77a4a-d347-4b56-9131-470a53d0b149/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-05-17_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_2.20.20.png)
+![스크린샷 2024-05-17 오후 2 20 20 (1)](https://github.com/2eey10/elasticsearch-vector-crud/assets/133326837/2d3df000-09d1-4c23-8d79-10db7c8c797c)
 
  3.  **Kibana**가 사용하는 port=5601. [https://localhost:5601](https://localhost:5601/) 접속
 
-![스크린샷 2024-05-17 오후 2.20.27.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/61348738-4149-40f5-bfd0-910df567780f/a6b4773c-a269-421e-a738-aa1cf98fdeb4/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-05-17_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_2.20.27.png)
+![스크린샷 2024-05-17 오후 2 20 27](https://github.com/2eey10/elasticsearch-vector-crud/assets/133326837/f7b488b1-42da-4b6f-8eda-dc78c4fbd863)
 
 1. Elasticsearch 설치 시 출력됐던 ***enrollment token을 붙여넣기***
 
-![스크린샷 2024-05-17 오후 2.21.09.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/61348738-4149-40f5-bfd0-910df567780f/38880fa3-9024-4b35-b34e-a460be6bed53/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-05-17_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_2.21.09.png)
+![스크린샷 2024-05-17 오후 2 21 09](https://github.com/2eey10/elasticsearch-vector-crud/assets/133326837/21ed1657-a172-4f46-ab6e-c17e90ed3bd1)
 
 5. token 입력 시 확인 코드 입력 창이 뜬다. 동시에, 터미널에서 출력된 6자리 코드 입력
 
-![스크린샷 2024-05-17 오후 2.21.29.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/61348738-4149-40f5-bfd0-910df567780f/874de4f3-64d1-47c1-828c-6c0e6a6e8e01/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-05-17_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_2.21.29.png)
+![스크린샷 2024-05-17 오후 2 21 29 (1)](https://github.com/2eey10/elasticsearch-vector-crud/assets/133326837/17dadcf7-626a-434b-bbc3-186b2c0e9e90)
 
 1. 로그인 창이 나타나면, Elasticsearch의 login info를 동일하게 입력 후 login
 
-![스크린샷 2024-05-17 오후 2.55.51.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/61348738-4149-40f5-bfd0-910df567780f/5d396bda-437e-459e-b64c-f9937933ff3e/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-05-17_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_2.55.51.png)
+![스크린샷 2024-05-17 오후 2 55 51](https://github.com/2eey10/elasticsearch-vector-crud/assets/133326837/484644a0-9688-4b01-94d1-c46e4548cadc)
 
-![스크린샷 2024-05-17 오후 2.56.59.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/61348738-4149-40f5-bfd0-910df567780f/89a1634c-62df-431a-b24e-d1a5c4e032ad/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-05-17_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_2.56.59.png)
+![스크린샷 2024-05-17 오후 2 56 59](https://github.com/2eey10/elasticsearch-vector-crud/assets/133326837/7ded17c2-bed0-40c3-92eb-85ecff7b2559)
 
 7. 이후 data 추가 및 dataview 추가해서, Elastic engine을 Kibana로 모니터링하면 된다.
 
@@ -429,7 +428,7 @@ DELETE test
 
 API test tool
 
-![스크린샷 2024-05-22 오후 3.42.37.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/61348738-4149-40f5-bfd0-910df567780f/435cf602-4701-4184-96cf-3184be5e267b/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-05-22_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.42.37.png)
+![스크린샷 2024-05-22 오후 3 42 37](https://github.com/2eey10/elasticsearch-vector-crud/assets/133326837/15483978-01fb-43ce-b6d6-02e03529cffc)
 
 Ref:
 
