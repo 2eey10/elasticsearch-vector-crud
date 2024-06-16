@@ -248,7 +248,7 @@ Cluster
 
 **Request**
 
-```json
+```
 PUT test/_doc/1
 {
 "name": "YR LEE",
@@ -258,7 +258,7 @@ PUT test/_doc/1
 
 Response
 
-```json
+```
 {
   "_index": "test",
   "_id": "1",
@@ -287,13 +287,13 @@ Response
 
 **request**
 
-```json
+```
 GET test/_doc/1
 ```
 
 **response**
 
-```json
+```
 {
   "_index": "test",
   "_id": "1",
@@ -318,7 +318,7 @@ document의 내용은 `_source` 항목에 있음
 
 **request**
 
-```json
+```
 POST test/_doc
 {
   "name": "YR LEE",
@@ -328,7 +328,7 @@ POST test/_doc
 
 **response**
 
-```json
+```
 {
   "_index": "test",
   "_id": "UPTyno8BTlXDeQjR-Bkx",
@@ -350,7 +350,7 @@ document 수정을 위해 매번 PUT으로 기존 document내용을 다시 입�
 
 **request**
 
-```json
+```
 POST test/_update/1
 {
   "doc": {
@@ -361,7 +361,7 @@ POST test/_update/1
 
 **response**
 
-```json
+```
 {
   "_index": "test",
   "_id": "1",
@@ -385,7 +385,7 @@ POST test/_update/1
 
 **request**
 
-```json
+```
 DELETE test/_doc/1 
 # document 단위 삭제
 
@@ -396,7 +396,7 @@ DELETE test
 
 **response**
 
-```json
+```
 {
   "_index": "test",
   "_id": "1",
