@@ -50,7 +50,7 @@ https://github.com/elastic
 
 ![스크린샷 2024-05-20 오전 11 07 25](https://github.com/2eey10/elasticsearch-vector-crud/assets/133326837/9765775f-69e0-4eab-a088-2c47d3fef877)
 
-```json
+```
 
  Cluster
     │
@@ -163,7 +163,7 @@ https://github.com/elastic
 
 1. **user, password**: Elasticsearch를 관리하는 기본 사용자인 'elastic'의 비밀번호가 설정됨. **따로 기록해두는 것** 권장.
     
-    ```json
+    ```
     user: "elastic", password: "LGV8u_-JCULST=mx8+c3"
     # user는 elastic 고정. password는 최초로 발급받은 password 사용
     ```
@@ -179,7 +179,7 @@ https://github.com/elastic
 
 ![스크린샷 2024-05-17 오후 2 41 33](https://github.com/2eey10/elasticsearch-vector-crud/assets/133326837/5124ce4a-46b0-4aca-a756-1eff7ad0f0bd)
 
-```json
+```
 	{
   "name": "2eey10ucBookPro.kornet",
   "cluster_name": "elasticsearch",
@@ -256,7 +256,7 @@ https://github.com/elastic
 
 **Request**
 
-```json
+```
 PUT test/_doc/1
 {
 "name": "YR LEE",
@@ -266,7 +266,7 @@ PUT test/_doc/1
 
 Response
 
-```json
+```
 {
   "_index": "test",
   "_id": "1",
@@ -295,13 +295,13 @@ Response
 
 **request**
 
-```json
+```
 GET test/_doc/1
 ```
 
 **response**
 
-```json
+```
 {
   "_index": "test",
   "_id": "1",
@@ -326,7 +326,7 @@ document의 내용은 `_source` 항목에 있음
 
 **request**
 
-```json
+```
 POST test/_doc
 {
   "name": "YR LEE",
@@ -336,7 +336,7 @@ POST test/_doc
 
 **response**
 
-```json
+```
 {
   "_index": "test",
   "_id": "UPTyno8BTlXDeQjR-Bkx",
@@ -358,7 +358,7 @@ document 수정을 위해 매번 PUT으로 기존 document내용을 다시 입�
 
 **request**
 
-```json
+```
 POST test/_update/1
 {
   "doc": {
@@ -369,7 +369,7 @@ POST test/_update/1
 
 **response**
 
-```json
+```
 {
   "_index": "test",
   "_id": "1",
@@ -393,7 +393,7 @@ POST test/_update/1
 
 **request**
 
-```json
+```
 DELETE test/_doc/1 
 # document 단위 삭제
 
@@ -404,7 +404,7 @@ DELETE test
 
 **response**
 
-```json
+```
 {
   "_index": "test",
   "_id": "1",
