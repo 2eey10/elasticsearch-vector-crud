@@ -52,59 +52,6 @@ https://github.com/elastic
 
 ```
 
- Cluster
-    │
-    │
-    │
-		├── Node
-		│		  │
-		│		  ├── Index
-		│			│		├── Document
-		│			│		│      ├── Filed
-		│			│		│      ├── Filed
-		│			│		├── Document
-		│			│		├── Document
-		│			├── Index
-		│			│		├── Document
-		│			│		│      ├── Filed
-		│			│		│      ├── Filed
-		│			│		├── Document
-		│			│		├── Document
-		│			│
-		│			├──Index
-		│					├── Document
-		│					│      ├── Filed
-		│					│      ├── Filed
-		│					├── Document
-		│					├── Document
-		│
-		├── Node
-		│			│
-		│		  ├── Index
-		│			│		├── Document
-		│			│		│      ├── Filed
-		│			│		│      ├── Filed
-		│			│		├── Document
-		│			│		├── Document
-		│			├── Index
-		│			│		├── Document
-		│			│		│      ├── Filed
-		│			│		│      ├── Filed
-		│			│		├── Document
-		│			│		├── Document
-		│			│
-		│			├──Index
-		│					├── Document
-		│					│      ├── Filed
-		│					│      ├── Filed
-		│					├── Document
-		│					├── Document
-		.         .
-		.         .
-		.         .
-
-```
-
 ## ElasticSearch 문법
 
 ---
@@ -163,7 +110,7 @@ https://github.com/elastic
 
 1. **user, password**: Elasticsearch를 관리하는 기본 사용자인 'elastic'의 비밀번호가 설정됨. **따로 기록해두는 것** 권장.
     
-    ```
+
     user: "elastic", password: "LGV8u_-JCULST=mx8+c3"
     # user는 elastic 고정. password는 최초로 발급받은 password 사용
     ```
@@ -179,7 +126,7 @@ https://github.com/elastic
 
 ![스크린샷 2024-05-17 오후 2 41 33](https://github.com/2eey10/elasticsearch-vector-crud/assets/133326837/5124ce4a-46b0-4aca-a756-1eff7ad0f0bd)
 
-```
+
 	{
   "name": "2eey10ucBookPro.kornet",
   "cluster_name": "elasticsearch",
@@ -433,5 +380,4 @@ API test tool
 Ref:
 
 https://esbook.kimjmin.net/01-overview/1.1-elastic-stack/1.1.1-elasticsearch
-
 
