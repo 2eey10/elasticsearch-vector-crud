@@ -50,51 +50,6 @@ https://github.com/elastic
 
 ![스크린샷 2024-05-20 오전 11 07 25](https://github.com/2eey10/elasticsearch-vector-crud/assets/133326837/9765775f-69e0-4eab-a088-2c47d3fef877)
 
-## Elasticsearch Data Structure
-
-```plaintext
-Cluster
-│
-├── Node
-│   ├── Index
-│   │   ├── Document
-│   │   │   ├── Field
-│   │   │   ├── Field
-│   │   ├── Document
-│   │   ├── Document
-│   ├── Index
-│   │   ├── Document
-│   │   │   ├── Field
-│   │   │   ├── Field
-│   │   ├── Document
-│   │   ├── Document
-│   ├── Index
-│       ├── Document
-│       │   ├── Field
-│       │   ├── Field
-│       ├── Document
-│       ├── Document
-│
-├── Node
-│   ├── Index
-│   │   ├── Document
-│   │   │   ├── Field
-│   │   │   ├── Field
-│   │   ├── Document
-│   │   ├── Document
-│   ├── Index
-│   │   ├── Document
-│   │   │   ├── Field
-│   │   │   ├── Field
-│   │   ├── Document
-│   │   ├── Document
-│   ├── Index
-│       ├── Document
-│       │   ├── Field
-│       │   ├── Field
-│       ├── Document
-│       ├── Document
-...
 ```
 
 ## ElasticSearch 문법
@@ -155,7 +110,7 @@ Cluster
 
 1. **user, password**: Elasticsearch를 관리하는 기본 사용자인 'elastic'의 비밀번호가 설정됨. **따로 기록해두는 것** 권장.
     
-    ```json
+
     user: "elastic", password: "LGV8u_-JCULST=mx8+c3"
     # user는 elastic 고정. password는 최초로 발급받은 password 사용
     ```
@@ -171,7 +126,7 @@ Cluster
 
 ![스크린샷 2024-05-17 오후 2 41 33](https://github.com/2eey10/elasticsearch-vector-crud/assets/133326837/5124ce4a-46b0-4aca-a756-1eff7ad0f0bd)
 
-```json
+
 	{
   "name": "2eey10ucBookPro.kornet",
   "cluster_name": "elasticsearch",
@@ -425,3 +380,4 @@ API test tool
 Ref:
 
 https://esbook.kimjmin.net/01-overview/1.1-elastic-stack/1.1.1-elasticsearch
+
