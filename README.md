@@ -50,7 +50,7 @@ https://github.com/elastic
 
 ![스크린샷 2024-05-20 오전 11 07 25](https://github.com/2eey10/elasticsearch-vector-crud/assets/133326837/9765775f-69e0-4eab-a088-2c47d3fef877)
 
-```
+
 
 ## ElasticSearch 문법
 
@@ -66,8 +66,6 @@ https://github.com/elastic
 ---
 
 **Download**
-
----
 
 - **Elasticsearch**: 분석 엔진, Kibana와 상호작용
 - **Kibana**: Elasticsearch data를 시각화하고 탐색하는 웹 기반 인터페이스. Elasticsearch와 상호작용
@@ -87,12 +85,10 @@ https://github.com/elastic
 2. 다운로드 받은 후, 경로로 이동해 `unzip` 후 아래 코드 실행
     1. `./bin/elasticsearch`
     2. `./bin/elasticsearch -d
-    # 백그라운드 실행`
+    # 백그라운드 실행
         
         ```
         ./bin/elasticsearch -d
-        # 백그라운드 실행
-        ```
         
     
     - 게이트키퍼 오류 시(mac OS)
@@ -102,7 +98,7 @@ https://github.com/elastic
     sudo spctl --master-disable
     ```
     
-3. 실행 시 아래의 화면이 출력된다
+4. 실행 시 아래의 화면이 출력된다
 ![스크린샷 2024-05-17 오후 2 18 18 (1)](https://github.com/2eey10/elasticsearch-vector-crud/assets/133326837/1b893f22-3f03-4bc3-8eac-a3c9eba505b9)
 ![***login_info, enrollment token, http figer print. 이 세 가지 정보는 따로 저장 必***]
 
